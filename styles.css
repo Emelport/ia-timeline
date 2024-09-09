@@ -1,0 +1,73 @@
+/* Ajustes adicionales para la línea del tiempo */
+.timeline {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 3rem; /* Espacio entre items */
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    background-color: #e5e7eb; /* Línea vertical color gris claro */
+    top: 0;
+    bottom: 0;
+    left: calc(50% - 1px); /* Centrar la línea */
+    transform: translateX(-50%);
+}
+
+.timeline-date {
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background-color: #4f46e5; /* Azul oscuro */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    font-weight: bold;
+    top: 50%;
+    transform: translateY(-50%);
+    left: calc(50% - 1.5rem); /* Centrar el círculo */
+}
+
+.timeline-content {
+    margin-left: 4rem;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid #4f46e5; /* Línea a la izquierda del contenido */
+}
+
+.timeline-content:nth-child(even) {
+    margin-left: 0;
+    margin-right: 4rem;
+}
+
+.timeline-content:nth-child(odd) {
+    border-left-color: #ef4444; /* Rojo para los items impares */
+}
+
+.year-header {
+    padding: 1rem;
+    background-color: #f3f4f6; /* Gris claro de fondo */
+    border-bottom: 2px solid #e5e7eb; /* Línea de separación inferior */
+    margin-bottom: 2rem;
+}
+
+.year-header::before {
+    content: '';
+    display: block;
+    width: 3rem;
+    height: 2px;
+    background-color: #4f46e5; /* Azul oscuro */
+    margin-bottom: 0.5rem;
+}
